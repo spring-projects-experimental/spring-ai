@@ -24,6 +24,7 @@ import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.image.ImageResponse;
 import org.springframework.ai.stabilityai.StyleEnum;
 import org.springframework.ai.stabilityai.api.StabilityAiImageOptions;
+import org.springframework.ai.stabilityai.image.StabilityAiImageType;
 import org.springframework.boot.autoconfigure.AutoConfigurations;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 
@@ -54,7 +55,8 @@ public class StabilityAiAutoConfigurationIT {
 			ImageGeneration imageGeneration = imageResponse.getResult();
 			Image image = imageGeneration.getOutput();
 
-			assertThat(image.getB64Json()).isNotEmpty();
+			assertThat(image.getType()).isEqualTo(StabilityAiImageType.BASE64);
+			assertThat(image.getData()).isNotNull();
 		});
 	}
 
