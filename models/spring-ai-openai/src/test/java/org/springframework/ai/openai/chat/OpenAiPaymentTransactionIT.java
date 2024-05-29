@@ -16,18 +16,11 @@
 
 package org.springframework.ai.openai.chat;
 
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import reactor.core.publisher.Flux;
-
 import org.springframework.ai.chat.client.AdvisedRequest;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.RequestResponseAdvisor;
@@ -46,6 +39,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Description;
 import org.springframework.core.ParameterizedTypeReference;
+import reactor.core.publisher.Flux;
+
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
