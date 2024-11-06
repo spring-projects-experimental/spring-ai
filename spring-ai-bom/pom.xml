@@ -176,6 +176,12 @@
                 <version>${project.version}</version>
             </dependency>
 
+			<dependency>
+				<groupId>org.springframework.ai</groupId>
+				<artifactId>spring-ai-wordlift</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
             <!-- Vector Databases -->
             <dependency>
                 <groupId>org.springframework.ai</groupId>
@@ -557,7 +563,13 @@
                 <version>${project.version}</version>
             </dependency>
 
-        </dependencies>
+			<dependency>
+				<groupId>org.springframework.ai</groupId>
+				<artifactId>spring-ai-wordlift-spring-boot-starter</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+		</dependencies>
     </dependencyManagement>
 
     <build>
